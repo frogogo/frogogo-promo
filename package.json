@@ -6,6 +6,7 @@
     "build": "vue-cli-service build"
   },
   "dependencies": {
+    "smooth-scroll": "^16.1.1",
     "tailwindcss": "^1.1.3",
     "vue": "^2.6.10",
     "vue-infinite-slide-bar": "^1.1.1",
