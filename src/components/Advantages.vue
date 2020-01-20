@@ -4,7 +4,7 @@
 
     <div id="advantages">
       <div v-for="advantage in advantages" class="flex md:items-center advantage">
-        <img v-lazy="advantage.imageSrc" class="w-20 h-20 md:w-40 md:h-40 mr-5 md:mr-12">
+        <img :src="advantage.imageSrc" class="w-20 h-20 md:w-40 md:h-40 mr-5 md:mr-12">
         <div>
           <p class="font-semibold md:text-2xl mb-3">{{ advantage.title }}</p>
           <p class="text-grey-800 text-sm md:text-base leading-normal">{{ advantage.description }}</p>
@@ -14,7 +14,7 @@
 
     <div class="text-center my-16">
       <a :href="registrationLink"
-         class="bg-primary text-white font-bold px-10 py-3 rounded uppercase">
+         class="bg-primary text-white hover:bg-secondary font-bold px-10 py-3 rounded uppercase">
          Зарегистрироваться
        </a>
     </div>

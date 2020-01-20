@@ -18,7 +18,7 @@
           </a>
         </div>
         <div class="md:w-1/2 md:absolute md:bottom-0 md:right-0">
-          <img v-lazy="require('@/assets/images/ima-header.png')">
+          <img :src="require('@/assets/images/ima-header.png')">
         </div>
       </div>
     </div>
@@ -26,15 +26,9 @@
 </template>
 
 <script>
-import SmoothScroll from 'smooth-scroll'
-
-SmoothScroll('.smooth-scroll', { speed: 700 })
-
 export default {
   name: 'Header',
-  components: {
-    SmoothScroll
-  },
+  components: {},
   data() {
     return {
       logoUrl: 'https://frogogo.ru'

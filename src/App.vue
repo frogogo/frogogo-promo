@@ -3,6 +3,8 @@
     <Header/>
     <ItemsCarousel/>
     <Advantages/>
+    <Steps/>
+    <Promotions/>
   </div>
 </template>
 
@@ -10,17 +12,23 @@
 import Header from './components/Header.vue'
 import ItemsCarousel from './components/ItemsCarousel.vue'
 import Advantages from './components/Advantages.vue'
+import Steps from './components/Steps.vue'
+import Promotions from './components/Promotions.vue'
 
 export default {
   name: 'app',
   components: {
-    Header, ItemsCarousel, Advantages
+    Header, ItemsCarousel, Advantages, Steps, Promotions
   }
 }
 </script>
 
 <style lang="css">
   @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&display=swap');
+
+  a {
+    transition: all 0.3s ease;
+  }
 
   #app {
     font-family: 'Open Sans', sans-serif;
