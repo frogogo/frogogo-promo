@@ -1,22 +1,19 @@
 <template>
-  <items-carousel class="items-carousel relative mx-auto">
-    <div class="flex">
+  <div class="items-carousel relative">
+    <div class="flex justify-center">
       <div v-for="image in images">
         <div class="flex items-center justify-center rounded-lg mr-4 w-24 h-32 md:w-48 md:h-64">
           <img :src="image.src" class="rounded-lg">
         </div>
       </div>
     </div>
-  </items-carousel>
+  </div>
 </template>
 
 <script>
-import ItemsCarousel from 'vue-infinite-slide-bar'
-
 export default {
   name: 'Header',
   components: {
-    ItemsCarousel
   },
   data() {
     return {
@@ -60,6 +57,5 @@ export default {
 <style scoped lang="css">
   .items-carousel {
     top: -4rem;
-    max-width: 100rem;
   }
 </style>

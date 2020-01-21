@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <Header/>
-    <ItemsCarousel/>
+    <Items/>
     <Advantages/>
     <Steps/>
     <Promotions/>
@@ -10,7 +10,7 @@
 
 <script>
 import Header from './components/Header.vue'
-import ItemsCarousel from './components/ItemsCarousel.vue'
+import Items from './components/Items.vue'
 import Advantages from './components/Advantages.vue'
 import Steps from './components/Steps.vue'
 import Promotions from './components/Promotions.vue'
@@ -18,7 +18,7 @@ import Promotions from './components/Promotions.vue'
 export default {
   name: 'app',
   components: {
-    Header, ItemsCarousel, Advantages, Steps, Promotions
+    Header, Items, Advantages, Steps, Promotions
   }
 }
 </script>
