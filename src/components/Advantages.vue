@@ -14,6 +14,7 @@
 
     <div class="text-center my-16">
       <a :href="`https://frogogo.ru/users/sign_up?promo_code=${promocode}`"
+         target="_blank"
          class="bg-primary text-white hover:bg-secondary font-bold px-10 py-3 rounded uppercase">
          Зарегистрироваться
        </a>
