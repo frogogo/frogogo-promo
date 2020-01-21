@@ -9,7 +9,7 @@
               <img :src="require('@/assets/images/logo-frogogo-header.svg')" class="w-full">
             </picture>
           </a>
-          <h1 class="font-bold text-white text-xl md:text-3xl leading-snug md:max-w-lg mb-8">
+          <h1 class="font-bold text-white text-xl md:text-3xl leading-snug md:max-w-md lg:max-w-lg mb-8">
             Покупайте на frogogo.ru и оплачивайте до 90% стоимости бонусными рублями.
           </h1>
           <a href="#details"
