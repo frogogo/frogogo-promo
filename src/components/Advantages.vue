@@ -13,7 +13,7 @@
     </div>
 
     <div class="text-center my-16">
-      <a :href="registrationLink"
+      <a :href="`https://frogogo.ru/users/sign_up?promo_code=${promocode}`"
          class="bg-primary text-white hover:bg-secondary font-bold px-10 py-3 rounded uppercase">
          Зарегистрироваться
        </a>
@@ -50,7 +50,7 @@ export default {
           description: 'Сумма любой покупки на frogogo вернётся на ваш бонусный счёт. Участвуйте в акциях наших партнёров и сканируйте чеки, чтобы получить ещё больше бонусных рублей.'
         }
       ],
-      registrationLink: 'https://frogogo.ru/users/sign_up'
+      promocode: 'BONUS'
     }
   }
 }
