@@ -13,7 +13,7 @@
             Покупайте на frogogo.ru и оплачивайте до 90% стоимости бонусными рублями.
           </h1>
           <a href="#details"
-             class="smooth-scroll hidden lg:inline bg-white text-primary font-bold px-10 py-3 rounded uppercase">
+             class="smooth-scroll hidden lg:inline bg-white hover:bg-primary hover:text-white border border-white text-primary font-bold px-10 py-3 rounded uppercase">
             Узнать больше
           </a>
         </div>
