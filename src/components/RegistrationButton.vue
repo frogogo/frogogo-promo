@@ -41,9 +41,9 @@ export default {
       }
     },
     setUtmParamsToRegistrationUrl() {
-      const utmParams = JSON.parse(localStorage.getItem('utmParams'))
+      if (!localStorage.getItem('utmParams')) return
 
-      if (!utmParams) return
+      const utmParams = JSON.parse(localStorage.getItem('utmParams'))
 
       for (const [key, value] of Object.entries(utmParams)) {
         this.utmParams +=`?${key}=${value}`
