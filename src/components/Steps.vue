@@ -8,14 +8,14 @@
             <span class="w-10 h-10 flex flex-none items-center justify-center text-3xl font-bold bg-primary text-white rounded-full mr-5">1</span>
             <div>
               <p class="font-semibold mb-2">Зарегистрируйтесь на frogogo.ru</p>
-              <p class="text-gray-800">И получите приветственный бонус – 500 рублей </p>
+              <p class="text-gray-800">И получите приветственный бонус – 500 ₽</p>
             </div>
           </div>
           <div class="flex flex-1 md:items-center">
             <span class="w-10 h-10 flex flex-none items-center justify-center text-3xl font-bold bg-primary text-white rounded-full mr-5">2</span>
             <div>
               <p class="font-semibold mb-2">Пополните бонусный счёт</p>
-              <p class="text-gray-800">Активируйте промокод {{ promocode }} и на ваш бонусный счёт поступит {{ bonusValue }} рублей, которые сразу же можно потратить</p>
+              <p class="text-gray-800">Активируйте промокод {{ promocode }} и на ваш бонусный счёт поступит {{ bonusValue }} ₽, которые сразу же можно потратить</p>
             </div>
           </div>
         </div>
@@ -40,7 +40,7 @@
         <div class="flex-1 text-right">
           <div>
             <p class="font-semibold md:text-2xl mb-2">Зарегистрируйтесь на frogogo.ru</p>
-            <p class="text-gray-800">И получите приветственный бонус – 500 рублей </p>
+            <p class="text-gray-800">И получите приветственный бонус – 500 ₽</p>
           </div>
 
           <div class="mt-20 xl:mt-32">
@@ -90,7 +90,7 @@
         <div class="flex-1 mt-24">
           <div>
             <p class="font-semibold md:text-2xl mb-2">Пополните бонусный счёт</p>
-            <p class="text-gray-800">Активируйте промокод {{ promocode }} и на ваш бонусный счёт поступит {{ bonusValue }} рублей, которые сразу же можно потратить</p>
+            <p class="text-gray-800">Активируйте промокод {{ promocode }} и на ваш бонусный счёт поступит {{ bonusValue }} ₽, которые сразу же можно потратить</p>
           </div>
 
           <div class="mt-6 lg:mt-20">
@@ -106,12 +106,11 @@
 <script>
 export default {
   name: 'Steps',
-  components: {
-  },
+  components: {},
   data() {
     return {
       promocode: 'BONUS',
-      bonusValue: 3000
+      bonusValue: '3 000'
     }
   }
 }

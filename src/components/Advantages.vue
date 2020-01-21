@@ -24,7 +24,7 @@
 <script>
 export default {
   name: 'Advantages',
-  components: { },
+  components: {},
   data() {
     return {
       title: 'frogogo – это клуб выгодных покупок со 100% кэшбэком на бонусный счёт',
@@ -46,7 +46,7 @@ export default {
         },
         {
           imageSrc: require('@/assets/images/ima-morebonus.png'),
-          title: 'Больше покупок – больше бонусных рублей',
+          title: 'Больше покупок — больше бонусных рублей',
           description: 'Сумма любой покупки на frogogo вернётся на ваш бонусный счёт. Участвуйте в акциях наших партнёров и сканируйте чеки, чтобы получить ещё больше бонусных рублей.'
         }
       ],

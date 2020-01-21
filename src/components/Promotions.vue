@@ -18,8 +18,7 @@
 <script>
 export default {
   name: 'Promotions',
-  components: {
-  },
+  components: {},
   data() {
     return {
       promotions: [
