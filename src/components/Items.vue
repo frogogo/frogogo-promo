@@ -1,5 +1,5 @@
 <template>
-  <div class="items-carousel relative">
+  <div class="items-carousel relative overflow-x-hidden">
     <div class="flex justify-center">
       <div v-for="image in images">
         <div class="flex items-center justify-center rounded-lg mr-4 w-24 h-32 md:w-48 md:h-64">
