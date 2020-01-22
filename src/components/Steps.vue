@@ -8,7 +8,7 @@
             <span class="w-10 h-10 flex flex-none items-center justify-center text-3xl font-bold bg-primary text-white rounded-full mr-5">1</span>
             <div>
               <p class="font-semibold mb-2">Зарегистрируйтесь на frogogo.ru</p>
-              <p class="text-gray-800">И получите приветственный бонус – 500 ₽</p>
+              <p class="text-gray-800">И получите приветственный бонус — 500 ₽</p>
             </div>
           </div>
           <div class="flex flex-1 md:items-center">
@@ -40,7 +40,7 @@
         <div class="flex-1 text-right">
           <div>
             <p class="font-semibold md:text-2xl mb-2">Зарегистрируйтесь на frogogo.ru</p>
-            <p class="text-gray-800">И получите приветственный бонус – 500 ₽</p>
+            <p class="text-gray-800">И получите приветственный бонус — 500 ₽</p>
           </div>
 
           <div class="mt-20 xl:mt-32">
@@ -49,7 +49,7 @@
           </div>
         </div>
 
-        <!-- Steps svg -->
+        <!-- Steps SVG -->
         <svg class="mr-10" xmlns="http://www.w3.org/2000/svg" width="249" height="350" viewBox="0 0 249 350">
           <g fill="none" fill-rule="evenodd">
             <path d="M78.317 23c-.174 23.48 18.72 42.656 42.2 42.83l.315.001h59.239c24.261 0 43.929 19.668 43.929 43.93 0 24.261-19.668 43.93-43.93 43.93h-73.22c-23.806 0-43.105 19.298-43.105 43.105s19.3 43.106 43.106 43.106h42.445c24.11 0 43.655 19.545 43.655 43.655s-19.545" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke-dasharray="6" stroke="#4AD9BD"></path>

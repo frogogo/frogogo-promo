@@ -6,6 +6,7 @@
     <RegistrationButton/>
     <Steps/>
     <Promotions/>
+    <RegistrationButton/>
   </div>
 </template>
 
