@@ -15,7 +15,7 @@
             <span class="w-10 h-10 flex flex-none items-center justify-center text-3xl font-bold bg-primary text-white rounded-full mr-5">2</span>
             <div>
               <p class="font-semibold mb-2">Пополните бонусный счёт</p>
-              <p class="text-gray-800">Активируйте промокод {{ promocode }} и на ваш бонусный счёт поступит {{ bonusValue }} ₽, которые сразу же можно потратить</p>
+              <p class="text-gray-800">Активируйте промокод {{ promocode }} и на ваш бонусный счёт поступит <span class="whitespace-no-wrap">{{ bonusValue }} ₽</span>, которые сразу же можно потратить</p>
             </div>
           </div>
         </div>
@@ -90,7 +90,7 @@
         <div class="flex-1 mt-24">
           <div>
             <p class="font-semibold md:text-2xl mb-2">Пополните бонусный счёт</p>
-            <p class="text-gray-800">Активируйте промокод {{ promocode }} и на ваш бонусный счёт поступит {{ bonusValue }} ₽, которые сразу же можно потратить</p>
+            <p class="text-gray-800">Активируйте промокод {{ promocode }} и на ваш бонусный счёт поступит <span class="whitespace-no-wrap">{{ bonusValue }} ₽</span>, которые сразу же можно потратить</p>
           </div>
 
           <div class="mt-6 lg:mt-20">

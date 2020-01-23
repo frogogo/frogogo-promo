@@ -13,7 +13,7 @@
       </div>
     </div>
     <div class="mb-6 md:mb-10 text-center">
-      <h3 class="text-xl md:text-3xl leading-normal mb-5 font-bold">Держите промокод {{ promocode }} на {{ bonusValue }} ₽ на вашу первую покупку</h3>
+      <h3 class="text-xl md:text-3xl leading-normal mb-5 font-bold">Держите промокод {{ promocode }} на <span class="whitespace-no-wrap">{{ bonusValue }} ₽</span> на вашу первую покупку</h3>
       <p class="leading-normal text-xl font-light mb-8">Активируйте его при регистрации и деньги моментально зачислятся на личный счет!</p>
       <p class="text-xs text-grey-700">Регистрируясь на сайте, вы соглашаетесь с нашими <a class="text-secondary" href="https://frogogo.ru/docs/ru/offer.pdf" target="_blank">Правилами</a> и <a class="text-secondary" href="https://frogogo.ru/docs/ru/personal-data.pdf" target="_blank">Политикой конфиденциальности</a> и соглашаетесь на информационную рассылку.</p>
     </div>
