@@ -1,6 +1,6 @@
 <template>
   <div class="text-center my-16">
-    <a v-bind:href="`https://frogogo.ru/users/sign_up?promo_code=${promocode}${specialParams}`"
+    <a v-bind:href="`https://frogogo.ru/users/sign_up${params}`"
        class="bg-primary text-white hover:bg-secondary font-bold px-10 py-3 rounded uppercase">
        Зарегистрироваться
      </a>
@@ -14,45 +14,26 @@ export default {
   data() {
     return {
       promocode: 'BONUS',
-      specialParams: ''
+      params: '',
     }
   },
   created() {
-    if (!localStorage.getItem('specialParams')) {
-      this.saveSpecialParams()
-    }
-
-    this.setSpecialParamsToRegistrationUrl()
+    this.setUrlParamsToRegistrationButtonUrl()
   },
   methods: {
-    saveSpecialParams() {
-      // Get params with special keyword from window location URL and save it to localStorage
+    setUrlParamsToRegistrationButtonUrl() {
+      // Get params from window location URL and set it to registration URL
       const urlParams = new URLSearchParams(window.location.search)
-      const keyword = 'utm_'
-      let specialParams = {}
+
+      if (Array.from(urlParams).length < 0) return
+
+      let index = 0, symbol
 
       for (const [key, value] of urlParams.entries()) {
-        if (key.includes(keyword)) {
-          specialParams[key] = value
-        }
+        index ==  0 ? symbol = '?' : symbol = '&'
+        this.params +=`${symbol}${key}=${value}`
+        index++
       }
-
-      if (!this.isEmptyObject(specialParams)) {
-        localStorage.setItem('specialParams', JSON.stringify(specialParams))
-      }
-    },
-    setSpecialParamsToRegistrationUrl() {
-      // Set params to registration URL
-      if (!localStorage.getItem('specialParams')) return
-
-      const specialParams = JSON.parse(localStorage.getItem('specialParams'))
-
-      for (const [key, value] of Object.entries(specialParams)) {
-        this.specialParams +=`?${key}=${value}`
-      }
-    },
-    isEmptyObject(object) {
-      return Object.keys(object).length === 0
     }
   }
 }
