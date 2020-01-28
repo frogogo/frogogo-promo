@@ -22,6 +22,24 @@ export default {
   name: 'app',
   components: {
     Header, Items, Advantages, RegistrationButton, Steps, Promotions
+  },
+  methods: {
+    initializeFacebookEvents() {
+      const facebookEvents = {
+        register: 'Search'
+      }
+
+      window.addEventListener('click', ({ target }) => {
+        const { userAction } = target.dataset
+        const facebookEvent = facebookEvents[userAction]
+        facebookEvent && fbq('track', facebookEvent)
+      })
+
+        bq('track', 'ViewContent')
+    }
+  },
+  mounted() {
+    this.initializeFacebookEvents()
   }
 }
 </script>

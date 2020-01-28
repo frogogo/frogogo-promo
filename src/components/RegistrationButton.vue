@@ -1,6 +1,7 @@
 <template>
   <div class="text-center my-16">
     <a v-bind:href="`https://frogogo.ru/users/sign_up${params}`"
+       data-user-action="register"
        class="bg-primary text-white hover:bg-secondary font-bold px-10 py-3 rounded uppercase">
        Зарегистрироваться
      </a>
