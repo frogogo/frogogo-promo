@@ -3,10 +3,10 @@
     <Header/>
     <Items/>
     <Advantages/>
-    <RegistrationButton/>
+    <RegistrationButton userAction="promoPageRegisterUp" />
     <Steps/>
     <Promotions/>
-    <RegistrationButton/>
+    <RegistrationButton userAction="promoPageRegisterDown"/>
   </div>
 </template>
 
@@ -35,11 +35,49 @@ export default {
         facebookEvent && fbq('track', facebookEvent)
       })
 
-        bq('track', 'ViewContent')
+       fbq('track', 'ViewContent')
+    },
+    initializeAnalytics() {
+      window.dataLayer = window.dataLayer || []
+
+      const analyticsEvents = {
+        promoPageRegisterUp: {
+          eventName: 'RegisterFromPromoUp',
+          category: 'PromoRegistration',
+          action: 'RegisterUp',
+          label: window.location.href
+        },
+        promoPageRegisterDown: {
+          eventName: 'RegisterFromPromoDown',
+          category: 'PromoRegistration',
+          action: 'RegisterDown',
+          label: window.location.href
+        }
+      }
+
+      const targets = document.querySelectorAll('[data-user-action]')
+
+      targets.forEach(target => {
+        const userAction = target.dataset.userAction
+
+        Object.entries(analyticsEvents).map(([eventKey, eventValue]) => {
+          if (eventKey === userAction) {
+            target.addEventListener('click', () => {
+              window.dataLayer.push({
+                event: eventValue.eventName,
+                category: eventValue.category,
+                action: eventValue.action,
+                label: eventValue.label
+              })
+            })
+          }
+        })
+      })
     }
   },
   mounted() {
     this.initializeFacebookEvents()
+    this.initializeAnalytics()
   }
 }
 </script>
