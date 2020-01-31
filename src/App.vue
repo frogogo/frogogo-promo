@@ -3,7 +3,7 @@
     <Header/>
     <Items/>
     <Advantages/>
-    <RegistrationButton userAction="promoPageRegisterUp" />
+    <RegistrationButton userAction="promoPageRegisterUp"/>
     <Steps/>
     <Promotions/>
     <RegistrationButton userAction="promoPageRegisterDown"/>
@@ -23,6 +23,9 @@ export default {
   components: {
     Header, Items, Advantages, RegistrationButton, Steps, Promotions
   },
+  mounted() {
+    this.initializeFacebookEvents()
+  },
   methods: {
     initializeFacebookEvents() {
       const facebookEvents = {
@@ -36,48 +39,7 @@ export default {
       })
 
        fbq('track', 'ViewContent')
-    },
-    initializeAnalytics() {
-      window.dataLayer = window.dataLayer || []
-
-      const analyticsEvents = {
-        promoPageRegisterUp: {
-          eventName: 'RegisterFromPromoUp',
-          category: 'PromoRegistration',
-          action: 'RegisterUp',
-          label: window.location.href
-        },
-        promoPageRegisterDown: {
-          eventName: 'RegisterFromPromoDown',
-          category: 'PromoRegistration',
-          action: 'RegisterDown',
-          label: window.location.href
-        }
-      }
-
-      const targets = document.querySelectorAll('[data-user-action]')
-
-      targets.forEach(target => {
-        const userAction = target.dataset.userAction
-
-        Object.entries(analyticsEvents).map(([eventKey, eventValue]) => {
-          if (eventKey === userAction) {
-            target.addEventListener('click', () => {
-              window.dataLayer.push({
-                event: eventValue.eventName,
-                eventCategory: eventValue.category,
-                eventAction: eventValue.action,
-                eventLabel: eventValue.label
-              })
-            })
-          }
-        })
-      })
     }
-  },
-  mounted() {
-    this.initializeFacebookEvents()
-    this.initializeAnalytics()
   }
 }
 </script>
