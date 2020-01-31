@@ -65,9 +65,9 @@ export default {
             target.addEventListener('click', () => {
               window.dataLayer.push({
                 event: eventValue.eventName,
-                category: eventValue.category,
-                action: eventValue.action,
-                label: eventValue.label
+                eventCategory: eventValue.category,
+                eventAction: eventValue.action,
+                eventLabel: eventValue.label
               })
             })
           }
