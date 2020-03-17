@@ -1,6 +1,6 @@
 <template>
   <div class="text-center my-16">
-    <a v-bind:href="`https://frogogo.ru/users/sign_up${params}`"
+    <a v-bind:href="`https://frogogo.ru/users/sign_up${getParamsFromUrl()}`"
        :data-user-action="this.userAction"
        @click="setAnalyticsEvent"
        class="bg-primary text-white hover:bg-secondary font-bold px-10 py-3 rounded uppercase">
@@ -10,8 +10,11 @@
 </template>
 
 <script>
+import getParamsFromUrl from '../mixins/getParamsFromUrl'
+
 export default {
   name: 'RegistrationButton',
+  mixins: [getParamsFromUrl],
   components: {},
   props: {
     userAction: String
@@ -19,27 +22,9 @@ export default {
   data() {
     return {
       promocode: 'BONUS',
-      params: '',
     }
   },
-  created() {
-    this.setUrlParamsToRegistrationButtonUrl()
-  },
   methods: {
-    setUrlParamsToRegistrationButtonUrl() {
-      // Get params from window location URL and set it to registration URL
-      const urlParams = new URLSearchParams(window.location.search)
-
-      if (Array.from(urlParams).length < 0) return
-
-      let index = 0, symbol
-
-      for (const [key, value] of urlParams.entries()) {
-        index ==  0 ? symbol = '?' : symbol = '&'
-        this.params +=`${symbol}${key}=${value}`
-        index++
-      }
-    },
     setAnalyticsEvent(event) {
       const analyticsEvents = {
         promoPageRegisterUp: {
@@ -55,7 +40,6 @@ export default {
           label: window.location.href
         }
       }
-
 
       const userAction = event.target.dataset.userAction
 

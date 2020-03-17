@@ -3,7 +3,7 @@
     <div class="container">
       <div class="flex flex-col md:flex-row items-center pt-10 lg:py-20 relative">
         <div class="flex-1 md:mb-20 xl:mb-10">
-          <a :href="logoUrl" class="block mb-8 w-12 h-12 md:w-32 md:h-32">
+          <a :href="logoUrl + getParamsFromUrl()" class="block mb-8 w-12 h-12 md:w-32 md:h-32">
             <picture>
               <source :srcset="require('@/assets/images/logo-frogogo-b-w.svg')" media="(min-width: 768px)">
               <img :src="require('@/assets/images/logo-frogogo-header.svg')" class="w-full">
@@ -26,8 +26,11 @@
 </template>
 
 <script>
+import getParamsFromUrl from '../mixins/getParamsFromUrl'
+
 export default {
   name: 'Header',
+  mixins: [getParamsFromUrl],
   components: {},
   data() {
     return {
