@@ -1,5 +1,7 @@
 # frogogo-promo
 
+![Screenshot](screenshot.png)
+
 To get started, clone the project and install the dependencies:
 
 ```
